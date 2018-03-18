@@ -49,7 +49,7 @@ echo -e "\n In Next Window Configure VNC for first run(Note: Keep Password of ex
 vncserver 
 vncserver -kill :1
 echo -e "\n Adding Some FireWall Rules"
-ufw allow 5901:5910/tcp
+sudo ufw allow 5901:5910/tcp
 echo -e "\n Writing DE Configuration"
 sudo cp ~/.vnc/xstartup ~/.vnc/xstartup.bak
 sudo mv $(pwd)/config/${DE_NAME} ~/.vnc/xstartup
